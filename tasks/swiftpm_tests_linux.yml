@@ -12,4 +12,4 @@ inputs:
 - name: concourse
 
 run:
-  path: concourse/tasks/fastlane_tests.sh
+  path: concourse/tasks/swiftpm_tests.sh
