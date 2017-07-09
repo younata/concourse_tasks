@@ -4,10 +4,11 @@ export LANG=C.UTF-8
 export LANGUAGE=C:en
 export LC_ALL=C.UTF-8
 
+apt-get update
+apt-get install -y openjdk-7-jre-headless
+
 cd code
 bundle install
-
-gem install s3_website
 
 bundle exec jekyll build
 
@@ -22,4 +23,4 @@ gzip: true
 s3_endpoint: $AWS_Zone
 EOF
 
-s3_website push --config-dir .
+yes | bundle exec s3_website push --config-dir .
