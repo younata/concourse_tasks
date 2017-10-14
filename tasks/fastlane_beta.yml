@@ -1,0 +1,9 @@
+---
+platform: darwin
+
+inputs:
+- name: code
+- name: concourse
+
+run:
+  path: concourse/tasks/fastlane_beta.sh
