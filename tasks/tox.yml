@@ -1,0 +1,15 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: younata/tox
+    tag: 'latest'
+
+inputs:
+- name: code
+- name: tasks
+
+run:
+  path: tasks/tasks/tox.sh
