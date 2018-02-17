@@ -2,6 +2,4 @@
 
 cd code
 
-pip install tox
-
 tox .
