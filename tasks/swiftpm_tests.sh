@@ -1,5 +1,7 @@
 #!/bin/bash -el
 
 cd code
-mv Package.swift .Package.main.swift && cp .Package.test.swift Package.swift
+if [ -f .Package.test.swift ]; then
+    mv Package.swift .Package.main.swift && cp .Package.test.swift Package.swift
+fi
 swift build && swift test
