@@ -1,0 +1,17 @@
+---
+platform: darwin
+
+inputs:
+- name: code
+
+caches:
+- path: code/Carthage
+
+run:
+  path: bash
+  args:
+    - carthage
+    - update
+    - --platform ios
+    - --cache-builds
+  dir: code
