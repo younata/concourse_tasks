@@ -4,8 +4,8 @@ platform: darwin
 inputs:
 - name: code
 
-caches:
-- path: code/Carthage
+#caches:
+#- path: code/Carthage
 
 run:
   path: bash

@@ -5,8 +5,8 @@ inputs:
 - name: code
 - name: concourse
 
-caches:
- - path: code/Carthage
+#caches:
+# - path: code/Carthage
 
 run:
   path: concourse/tasks/fastlane_beta.sh
