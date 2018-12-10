@@ -20,3 +20,13 @@ git config --global user.email "$USER_EMAIL"
 
 git commit -m "Update dependencies"
 
+set +e
+
+last_tag=$(git describe --abbrev=0 --tags || echo "v0.0.0")
+
+set -e
+semver=$(echo ${last_tag} | cut -d "v" -f 2)
+
+../concourse/tasks/increment_semver.sh -p ${semver} > tagfile
+
+
