@@ -8,12 +8,9 @@ inputs:
 outputs:
 - name: code
 
-#caches:
-# - path: code/Carthage
-
 params:
   USER_NAME:
   USER_EMAIL:
 
 run:
-  path: concourse/tasks/fastlane_dependency_check.sh
+  path: concourse/tasks/swift_update_dependencies.sh
