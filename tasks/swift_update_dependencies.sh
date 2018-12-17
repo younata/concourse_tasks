@@ -29,4 +29,7 @@ semver=$(echo ${last_tag} | cut -d "v" -f 2)
 
 ../concourse/tasks/increment_semver.sh -p ${semver} > tagfile
 
+cd ../
+
+cp -R code updated_code
 
