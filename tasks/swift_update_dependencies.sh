@@ -1,6 +1,10 @@
 #!/bin/bash -el
 
-cd code
+pushd concourse
+source tasks/increment_semver.sh
+popd
+
+pushd code
 
 carthage update
 swift package update
@@ -27,9 +31,9 @@ last_tag=$(git describe --abbrev=0 --tags || echo "v0.0.0")
 set -e
 semver=$(echo ${last_tag} | cut -d "v" -f 2)
 
-../concourse/tasks/increment_semver.sh -p ${semver} > tagfile
+increment_semver ${semver} > tagfile
 
-cd ../
+popd
 
 cp -R code updated_code
 

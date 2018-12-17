@@ -4,49 +4,53 @@
 
 # Parse command line options.
 
-while getopts ":Mmp" Option
-do
-  case $Option in
-    M ) major=true;;
-    m ) minor=true;;
-    p ) patch=true;;
-  esac
-done
+function increment_semver {
+    #while getopts ":Mmp" Option
+    #do
+    #  case $Option in
+    #    M ) major=true;;
+    #    m ) minor=true;;
+    #    p ) patch=true;;
+    #  esac
+    #done
 
-shift $(($OPTIND - 1))
+    #shift $(($OPTIND - 1))
 
-version=$1
+    patch=true
 
-# Build array from version string.
+    version=$1
 
-a=( ${version//./ } )
+    # Build array from version string.
 
-# If version string is missing or has the wrong number of members, show usage message.
+    a=( ${version//./ } )
 
-if [ ${#a[@]} -ne 3 ]
-then
-  echo "usage: $(basename $0) [-Mmp] major.minor.patch"
-  exit 1
-fi
+    # If version string is missing or has the wrong number of members, show usage message.
 
-# Increment version numbers as requested.
+    if [ ${#a[@]} -ne 3 ]
+    then
+      echo "usage: $(basename $0) [-Mmp] major.minor.patch"
+      exit 1
+    fi
 
-if [ ! -z $major ]
-then
-  ((a[0]++))
-  a[1]=0
-  a[2]=0
-fi
+    # Increment version numbers as requested.
 
-if [ ! -z $minor ]
-then
-  ((a[1]++))
-  a[2]=0
-fi
+    if [ ! -z $major ]
+    then
+      ((a[0]++))
+      a[1]=0
+      a[2]=0
+    fi
 
-if [ ! -z $patch ]
-then
-  ((a[2]++))
-fi
+    if [ ! -z $minor ]
+    then
+      ((a[1]++))
+      a[2]=0
+    fi
 
-echo "${a[0]}.${a[1]}.${a[2]}"
+    if [ ! -z $patch ]
+    then
+      ((a[2]++))
+    fi
+
+    echo "${a[0]}.${a[1]}.${a[2]}"
+}
