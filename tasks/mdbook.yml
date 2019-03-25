@@ -5,14 +5,14 @@ image_resource:
   type: docker-image
   source:
     repository: hrektts/mdbook
-    tag: 'latest'
+    tag: latest
 
 inputs:
 - name: code
-- name: tasks
+- name: concourse
 
 outputs:
 - name: book
 
 run:
-  path: tasks/tasks/mdbook.sh
+  path: concourse/tasks/mdbook.sh
