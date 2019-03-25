@@ -5,14 +5,14 @@ image_resource:
   type: docker-image
   source:
     repository: ruby
-    tag: latest
+    tag: alpine
 
 inputs:
 - name: code
-- name: tasks
+- name: concourse
 
 run:
-  path: tasks/tasks/html_proofer.sh
+  path: concourse/tasks/html_proofer.sh
 
 params:
   DOMAIN:
