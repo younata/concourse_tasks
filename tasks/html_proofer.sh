@@ -8,8 +8,6 @@ cd code
 
 /usr/local/bundle/bin/htmlproofer \
     --assume-extension \
-    --check-external-hash \
-    --check-html \
     --check-img-http \
     --enforce-https \
     --internal-domains $DOMAIN .
