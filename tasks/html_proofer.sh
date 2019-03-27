@@ -9,7 +9,6 @@ cd code
 /usr/local/bundle/bin/htmlproofer \
     --assume-extension \
     --check-external-hash \
-    --check-favicon \
     --check-html \
     --check-img-http \
     --enforce-https \
