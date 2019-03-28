@@ -9,4 +9,5 @@ cd code
 /usr/local/bundle/bin/htmlproofer \
     --assume-extension \
     --check-img-http \
+    --enforce-https \
     --internal-domains $DOMAIN .
