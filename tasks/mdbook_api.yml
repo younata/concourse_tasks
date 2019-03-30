@@ -1,0 +1,18 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: younata/mdbook-api
+    tag: latest
+
+inputs:
+- name: code
+- name: concourse
+
+outputs:
+- name: book
+
+run:
+  path: concourse/tasks/mdbook.sh
