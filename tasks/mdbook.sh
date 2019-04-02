@@ -9,6 +9,11 @@ cd code
 /usr/local/cargo/bin/mdbook build
 /usr/local/cargo/bin/mdbook test
 
+if [[ -d book/html ]]; then
+    mv -f book/html/* book/
+    rm -rf book/html
+fi
+
 cd ../
 
 cp -r code/book/* book/
