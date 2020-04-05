@@ -10,4 +10,5 @@ cd code
     --assume-extension \
     --check-img-http \
     --enforce-https \
+    --file-ignore "$FILE_IGNORES" \
     --internal-domains $DOMAIN .
