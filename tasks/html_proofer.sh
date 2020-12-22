@@ -4,6 +4,12 @@ export LANG=C.UTF-8
 export LANGUAGE=C:en
 export LC_ALL=C.UTF-8
 
+directory="$SUBDIRECTORY"
+
+if [ -n "${SUBDIRECTORY+set}" ]; then
+    directory='.'
+fi
+
 cd code
 
 /usr/local/bundle/bin/htmlproofer \
@@ -11,4 +17,4 @@ cd code
     --check-img-http \
     --enforce-https \
     --file-ignore "$FILE_IGNORES" \
-    --internal-domains $DOMAIN .
+    --internal-domains $DOMAIN "$directory"
