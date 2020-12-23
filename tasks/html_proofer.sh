@@ -18,5 +18,6 @@ echo "Checking all files in $directory"
     --assume-extension \
     --check-img-http \
     --enforce-https \
+    --only_4xx \
     --file-ignore "$FILE_IGNORES" \
     --internal-domains $DOMAIN "$directory"
