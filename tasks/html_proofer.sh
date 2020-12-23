@@ -6,7 +6,7 @@ export LC_ALL=C.UTF-8
 
 directory="."
 
-if [ "$SUBDIRECTORY" = "" ]; then
+if [ "$SUBDIRECTORY" != "" ]; then
     directory="$SUBDIRECTORY"
 fi
 
