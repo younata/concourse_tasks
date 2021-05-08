@@ -19,5 +19,6 @@ echo "Checking all files in $directory"
     --check-img-http \
     --enforce-https \
     --only_4xx \
+    --http-status-ignore "401,402,403,415" \
     --file-ignore "$FILE_IGNORES" \
     --internal-domains $DOMAIN "$directory"
