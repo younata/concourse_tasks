@@ -15,5 +15,6 @@ run:
 
 params:
   DOMAIN:
+  URL_IGNORES:
   FILE_IGNORES:
   SUBDIRECTORIES:
