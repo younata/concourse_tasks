@@ -26,4 +26,4 @@ fi
     --http-status-ignore "401,402,403,415" \
     --file-ignore "$FILE_IGNORES" \
     --url-ignore "$URL_IGNORES" \
-    --internal-domains $DOMAIN "$directory"
+    --internal-domains "$DOMAIN" "$directory"
