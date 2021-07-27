@@ -12,7 +12,11 @@ fi
 
 cd code
 
-echo "Checking all files in $directory"
+if [ "$directory" = "." ]; then
+    echo "Checking all files in `pwd`"
+else
+    echo "Checking all files in `pwd`/$directory"
+fi
 
 /usr/local/bundle/bin/htmlproofer \
     --assume-extension \
