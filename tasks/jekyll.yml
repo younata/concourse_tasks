@@ -12,4 +12,4 @@ inputs:
 - name: tasks
 
 run:
-  path: tasks/tasks/jekyll_tests.sh
+  path: tasks/tasks/jekyll.sh

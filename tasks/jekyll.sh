@@ -8,4 +8,3 @@ cd code
 bundle install
 
 bundle exec jekyll build
-bundle exec htmlproofer --assume-extension --internal-domains "${DOMAIN}" ./_site
