@@ -5,11 +5,11 @@ image_resource:
   type: docker-image
   source:
     repository: swift
-    tag: '5.7'
+    tag: latest
 
 inputs:
 - name: code
 - name: concourse
 
 run:
-  path: concourse/tasks/swiftpm_tests.sh
+  path: concourse/tasks/swiftpm_docc.sh
