@@ -8,3 +8,6 @@ cd code
 bundle install
 
 bundle exec jekyll build
+
+cd ../
+cp -R code/_site site

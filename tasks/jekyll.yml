@@ -11,5 +11,8 @@ inputs:
 - name: code
 - name: tasks
 
+outputs:
+- name: site
+
 run:
   path: tasks/tasks/jekyll.sh
